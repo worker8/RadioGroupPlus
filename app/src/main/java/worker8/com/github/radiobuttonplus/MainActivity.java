@@ -1,15 +1,17 @@
 package worker8.com.github.radiobuttonplus;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.widget.Toast;
+
+import worker8.com.github.radiogroupplus.RadioGroupPlus;
 
 public class MainActivity extends AppCompatActivity {
+    RadioGroupPlus mRadioGroupPlus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,35 +20,32 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        mRadioGroupPlus = (RadioGroupPlus) findViewById(R.id.radio_group_plus);
+        mRadioGroupPlus.setOnCheckedChangeListener(new RadioGroupPlus.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onCheckedChanged(RadioGroupPlus radioGroupPlus, @IdRes int i) {
+                Log.i("RadioGroupPlus", "onCheckedChanged:");
+                // Add your logic here
             }
         });
+
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+    public void onOrderClicked(View view) {
+        if (R.id.rb_latte == mRadioGroupPlus.getCheckedRadioButtonId()) {
+            Toast.makeText(MainActivity.this, "Latte", Toast.LENGTH_SHORT).show();
+        } else if (R.id.rb_mocha == mRadioGroupPlus.getCheckedRadioButtonId()) {
+            Toast.makeText(MainActivity.this, "Mocha", Toast.LENGTH_SHORT).show();
+        } else if (R.id.rb_americano == mRadioGroupPlus.getCheckedRadioButtonId()) {
+            Toast.makeText(MainActivity.this, "Americano", Toast.LENGTH_SHORT).show();
+        } else if (R.id.rb_espresso == mRadioGroupPlus.getCheckedRadioButtonId()) {
+            Toast.makeText(MainActivity.this, "Espresso", Toast.LENGTH_SHORT).show();
+        } else if (R.id.rb_orange == mRadioGroupPlus.getCheckedRadioButtonId()) {
+            Toast.makeText(MainActivity.this, "Orange", Toast.LENGTH_SHORT).show();
+        } else if (R.id.rb_butter == mRadioGroupPlus.getCheckedRadioButtonId()) {
+            Toast.makeText(MainActivity.this, "Butter", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(MainActivity.this, "No Drinks :(", Toast.LENGTH_SHORT).show();
         }
-
-        return super.onOptionsItemSelected(item);
     }
 }

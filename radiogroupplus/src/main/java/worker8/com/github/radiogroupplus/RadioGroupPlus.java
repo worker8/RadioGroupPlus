@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.support.annotation.IdRes;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
@@ -63,7 +62,7 @@ public class RadioGroupPlus extends LinearLayout {
 
         // retrieve selected radio button as requested by the user in the
         // XML layout file
-        //TODO: ignore attributes
+        //TODO: fix ignored attributes
 //        TypedArray attributes = context.obtainStyledAttributes(
 //                attrs, com.android.internal.R.styleable.RadioGroup, com.android.internal.R.attr.radioButtonStyle, 0);
 
@@ -319,7 +318,6 @@ public class RadioGroupPlus extends LinearLayout {
 
     private class CheckedStateTracker implements CompoundButton.OnCheckedChangeListener {
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-            Log.d("ddw", "onCheckedChanged: ");
             // prevents from infinite recursion
             if (mProtectFromCheckedChange) {
                 return;
@@ -346,7 +344,6 @@ public class RadioGroupPlus extends LinearLayout {
         private ViewGroup.OnHierarchyChangeListener mOnHierarchyChangeListener;
 
         public void traverseTree(View view) {
-            Log.d("ddw", "traverseTree: " + view);
             if (view instanceof RadioButton) {
                 int id = view.getId();
                 // generates an id if it's missing
@@ -373,7 +370,6 @@ public class RadioGroupPlus extends LinearLayout {
          * {@inheritDoc}
          */
         public void onChildViewAdded(View parent, View child) {
-            Log.d("ddw", "onChildViewAdded: " + child);
             traverseTree(child);
             if (parent == RadioGroupPlus.this && child instanceof RadioButton) {
                 int id = child.getId();

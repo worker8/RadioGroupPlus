@@ -4,94 +4,140 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="worker8.com.github.radiobuttonplus.MainActivity"
     tools:showIn="@layout/activity_main">
 
     <worker8.com.github.radiogroupplus.RadioGroupPlus
+        android:id="@+id/radio_group_plus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <FrameLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="60dp">
+
+            <ImageView
+                android:id="@+id/iv_latte"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@mipmap/ic_launcher" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|left"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_latte"
+                android:paddingLeft="20dp"
                 android:text="Latte" />
 
             <RadioButton
+                android:id="@+id/rb_latte"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|right" />
-        </FrameLayout>
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="#E0E0E0" />
 
-        <FrameLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="60dp">
+
+            <ImageView
+                android:id="@+id/iv_mocha"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@mipmap/ic_launcher" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|left"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_mocha"
+                android:paddingLeft="20dp"
                 android:text="Mocha" />
 
             <RadioButton
+                android:id="@+id/rb_mocha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|right" />
-        </FrameLayout>
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="#E0E0E0" />
 
-        <FrameLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="60dp">
+
+            <ImageView
+                android:id="@+id/iv_americano"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@mipmap/ic_launcher" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|left"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_americano"
+                android:paddingLeft="20dp"
                 android:text="Americano" />
 
             <RadioButton
+                android:id="@+id/rb_americano"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|right" />
-        </FrameLayout>
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="#E0E0E0" />
 
-        <FrameLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="60dp">
+
+            <ImageView
+                android:id="@+id/iv_espresso"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@mipmap/ic_launcher" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|left"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_espresso"
+                android:paddingLeft="20dp"
                 android:text="Espresso" />
 
             <RadioButton
+                android:id="@+id/rb_espresso"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|right" />
-        </FrameLayout>
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
@@ -103,22 +149,33 @@
             android:layout_height="60dp"
             android:orientation="horizontal">
 
-            <FrameLayout
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_weight="1">
 
+                <ImageView
+                    android:id="@+id/iv_orange"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:src="@mipmap/ic_launcher" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|left"
-                    android:text="Orange Juice" />
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_orange"
+                    android:paddingLeft="20dp"
+                    android:text="Orange" />
 
                 <RadioButton
+                    android:id="@+id/rb_orange"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|right" />
-            </FrameLayout>
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
 
             <View
                 android:layout_width="2dp"
@@ -127,23 +184,48 @@
                 android:layout_marginTop="10dp"
                 android:background="#E0E0E0" />
 
-            <FrameLayout
+            <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_weight="1"
                 android:paddingLeft="10dp">
 
+                <ImageView
+                    android:id="@+id/iv_butter"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:src="@mipmap/ic_launcher" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|left"
-                    android:text="Espresso" />
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_butter"
+                    android:paddingLeft="20dp"
+                    android:text="Butter" />
 
                 <RadioButton
+                    android:id="@+id/rb_butter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical|right" />
-            </FrameLayout>
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
         </LinearLayout>
+
     </worker8.com.github.radiogroupplus.RadioGroupPlus>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="#138BE8"
+        android:gravity="center"
+        android:onClick="onOrderClicked"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Order Drink"
+        android:textColor="@android:color/white" />
 </LinearLayout>
