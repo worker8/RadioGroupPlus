@@ -84,7 +84,7 @@ If you want a even weirder layout, it will also work, for example:
              <RadioButton...>
           </RelativeLayout>
         </LinearLayout>
-   </worker8.com.github.radiogroupplus.RadioGroupPlus>
+    </worker8.com.github.radiogroupplus.RadioGroupPlus>
 
 Now the 2 `RadioButton` under the `LinearLayout` and the 2 `RadioButton` inside the `RelativeLayout` will all be linked together.
 
