@@ -1,13 +1,13 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion buildVersion.compileSdk
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion buildVersion.minSdk
+        targetSdkVersion buildVersion.compileSdk
+        versionCode releaseVersion.code
+        versionName releaseVersion.name
     }
     buildTypes {
         release {
@@ -19,6 +19,6 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    testImplementation 'junit:junit:4.12'
-    implementation 'com.android.support:appcompat-v7:27.1.1'
+    testImplementation "junit:junit:${depVersions.testLibs.junit}"
+    implementation "com.android.support:appcompat-v7:${depVersions.googleLibs.support}"
 }

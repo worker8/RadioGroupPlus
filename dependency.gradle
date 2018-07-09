@@ -1,0 +1,19 @@
+ext.releaseVersion = [
+    code: 1,
+    name: "1.0"
+]
+
+ext.buildVersion = [
+    minSdk    : 14,
+    compileSdk: 27
+]
+
+ext.depVersions = [
+    googleLibs: [
+        support: "27.1.1"
+    ],
+
+    testLibs  : [
+        junit: "4.12"
+    ]
+]

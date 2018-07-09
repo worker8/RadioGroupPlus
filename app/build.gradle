@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion buildVersion.compileSdk
 
     defaultConfig {
         applicationId "worker8.com.github.radiobuttonplus"
-        minSdkVersion 14
-        targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion buildVersion.minSdk
+        targetSdkVersion buildVersion.compileSdk
+        versionCode releaseVersion.code
+        versionName releaseVersion.name
     }
     buildTypes {
         release {
@@ -20,8 +20,8 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    testImplementation 'junit:junit:4.12'
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support:design:27.1.1'
+    testImplementation "junit:junit:${depVersions.testLibs.junit}"
+    implementation "com.android.support:appcompat-v7:${depVersions.googleLibs.support}"
+    implementation "com.android.support:design:${depVersions.googleLibs.support}"
     implementation project(':radiogroupplus')
 }
