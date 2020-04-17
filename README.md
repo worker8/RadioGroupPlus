@@ -1,4 +1,4 @@
-# RadioGroupPlus
+# RadioGroupPlus ![](https://img.shields.io/badge/latest-v1.0.1-blue) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This is a tweak to the original Android `RadioGroup.java` class. This is because the original RadioGroup is only able to do:
 
