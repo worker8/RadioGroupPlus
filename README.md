@@ -111,11 +111,11 @@ Add this to **top** level `build.gradle`:
 
 Add this under dependencies:
 
-    compile 'com.github.worker8:RadioGroupPlus:v1.0.1'
+    implementation 'com.github.worker8:radiogroupplus:v1.0.1'
 
 If you run into conflict, use this instead:
 
-    compile('com.github.worker8:RadioGroupPlus:v1.0.1') {
+    implementation('com.github.worker8:radiogroupplus:v1.0.1') {
         transitive = false;
     }
     
